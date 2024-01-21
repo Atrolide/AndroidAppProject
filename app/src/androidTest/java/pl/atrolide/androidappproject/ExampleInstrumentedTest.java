@@ -1,4 +1,4 @@
-package pl.mikolajp.androidappproject;
+package pl.atrolide.androidappproject;
 
 import android.content.Context;
 

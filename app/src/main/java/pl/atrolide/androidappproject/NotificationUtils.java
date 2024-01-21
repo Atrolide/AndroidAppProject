@@ -1,10 +1,9 @@
-package pl.mikolajp.androidappproject;
+package pl.atrolide.androidappproject;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.os.Build;
+import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 
@@ -28,12 +27,14 @@ public class NotificationUtils {
         }
     }
 
+    public static void showToast(Context context, String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
     private static void createNotificationChannel(Context context) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
-                    "MyAppChannel",
-                    NotificationManager.IMPORTANCE_DEFAULT);
-            context.getSystemService(NotificationManager.class).createNotificationChannel(channel);
-        }
+        NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
+                "MyAppChannel",
+                NotificationManager.IMPORTANCE_DEFAULT);
+        context.getSystemService(NotificationManager.class).createNotificationChannel(channel);
     }
 }

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "pl.mikolajp.androidappproject"
+    namespace = "pl.atrolide.androidappproject"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "pl.mikolajp.androidappproject"
+        applicationId = "pl.atrolide.androidappproject"
         minSdk = 31
         targetSdk = 33
         versionCode = 1
